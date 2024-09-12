@@ -2,6 +2,7 @@
 <html lang="is">
 
 <head>
+  <link rel="stylesheet" href="../styles.css">
   <meta charset="utf-8">
   <title>Spilabúðin—Skráning á viðburði</title>
   <meta name="description"
@@ -13,11 +14,12 @@
 </head>
 
 <body>
+  <div class="wrapper">
   <header>
     <h1>Spilabúðin—Skráning á viðburði</h1>
   </header>
 
-  <p><a href="#efni">Beint í efni</a></p>
+  <p class="sr-only"><a href="#efni">Beint í efni</a></p>
 
   <nav>
     <ul>
@@ -28,7 +30,7 @@
     </ul>
   </nav>
 
-  <main id="efni">
+  <main class="skraning" id="efni">
     <p>Skráðu þig á viðburði hjá okkur!</p>
 
     <form method="GET" action=".">
@@ -96,7 +98,7 @@
         </div>
         <div>
           <label>
-            <input type="checkbox" name="allergy">Ofnæmi sem við ættum að vita af?</label>
+            <input id="checkbox" type="checkbox" name="allergy">Ofnæmi sem við ættum að vita af?</label>
         </div>
         <div>
           <label for="special-food">Annað sem við eigum að vita?</label>
@@ -122,12 +124,15 @@
         <legend>Samþykkja og panta</legend>
         <div>
           <label>
-            <input type="checkbox" name="terms">Ég samþykki skilmála
+            <input id="checkbox" type="checkbox" name="terms">Ég samþykki skilmála
             Spilabúðarinnar</label>
         </div>
         <button>Panta</button>
       </fieldset>
     </form>
+    <div class="aftur-forsida">
+      <p><a href="../index.html">Aftur á forsíðu</a>.</p>
+    </div>
   </main>
 
   <footer>
@@ -169,6 +174,7 @@
       </ul>
     </section>
   </footer>
+  </div>
 </body>
 
 </html>

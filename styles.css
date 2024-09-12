@@ -37,15 +37,19 @@
   
   /*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
   @font-face {
-    /* TODO Bæta við leturgerð */
+    font-family: 'Matemasie';
+    src: url(/font/Matemasie-Regular.ttf) format('woff2');
   }
   
   @font-face {
-    /* TODO Bæta við leturgerð */
+    font-family: 'Open Sans';
+    src: url(/font/OpenSans-VariableFont_wdth\,wght.ttf) format('woff2');
   }
   
   @font-face {
-    /* TODO Bæta við leturgerð */
+    font-family: 'Open Sans';
+    src: url(/font/OpenSans-VariableFont_wdth\,wght.ttf) format('woff2');
+    font-weight: bold;
   }
   
   /*** Allt meginmál notar open sans ***/
@@ -53,7 +57,7 @@
   input,
   select,
   button {
-    /* TODO Skilgreina */
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   }
   
   /*** Allar fyrirsagnir nota Matemasie regular ***/
@@ -61,7 +65,7 @@
   h2,
   h3,
   legend {
-    /* TODO Skilgreina */
+    font-family: 'Matemasie';
   }
   
   /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
@@ -86,15 +90,13 @@
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-  
     background-color: #f3dd99;
+    
   }
   
   .wrapper main {
     flex: 1;
   }
-  
-  /* Það sem fylgir er tillaga að uppbyggingu á selectorum fyrir verkefnið */
   
   /** Haus á síðum **/
   
@@ -116,8 +118,6 @@
   nav ul {
     list-style: none;
     text-align: center;
-    
-
   }
   nav ul li {
     display: inline-block;
@@ -132,16 +132,46 @@
   /** Meginmál og efni forsíðu **/
   
   main {
-    /* TODO Skilgreina */
+    display: inline;
+  }
+  .forsidu-efni{
+    margin-left: 1rem;
+    margin-right: 1rem;
+   
+  
+  }
+  .forsidu-efni img{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    float: right;
+    border-radius: 10px;
+  }
+  .forsidu-efni section{
+    margin: 1rem;
   }
   
-  /* TODO Skilgreina aðra selectora fyrir meginmál of forsíðu */
   
   /** Fótur **/
   
   footer {
+    padding: 2rem;
     background-color: #eebbdd;
     border-top: 4px solid #cc99bb;
+    text-align: center;
+  }
+  footer h2{
+    margin-bottom: 1rem;
+  }
+  footer ul{
+    list-style: none;
+    padding: 2rem;
+  }
+  footer dl dt{
+    font-weight: bold;
+  }
+  footer dl dd{
+    margin-bottom: 1rem;
   }
   
   /* Ef við notum section fyrir hvert svæði undir fót, þá er hægt að nota eftirfarandi */
@@ -157,19 +187,94 @@
   /** Spilasíða, töflustílar **/
   
   table {
-    /* TODO Skilgreina */
+    margin: 2rem;
+    padding: 0.5rem;
+    border-collapse: collapse;
+  }
+  table tr:nth-child(2n + 1){
+    background-color: #eebbdd;
+  } 
+  table img{
+    border-radius: 10px;
+  }
+  table tr td:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  table tr td:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    white-space: nowrap;
   }
   
-  /* TODO Skilgreina aðra selectora fyrir töflu */
   
   /** Viðburðir **/
   
   .event {
-    /* TODO Skilgreina, gerum ráð fyrir að hver viðburður hafi eigin selector */
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .event img{
+   float: left;
+   border-radius: 10px;
+   margin: 1rem;
+  }
+
+  .event p{
+    margin-top: 1rem;
+  }
+
+  .vidburdir-main p {
+    margin-left: 3rem;
+  }
+
+  .aftur-forsida{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
-  /* TODO Skilgreina aðra selectora fyrir viðburði */
   
   /** Skráningarform **/
   
-  /* TODO Skilgreina */
+  .skraning{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+main form{
+    padding: 1rem;
+  }
+  fieldset{
+    border-width: 0px;
+    padding: 1rem;   
+  }
+  button{
+    background-color: #eebbdd;
+    border-radius: 5px;
+  }
+  legend label, select, input, textarea{
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, textarea, select{
+    width: 20rem;
+    border-radius: 0;
+    border-width: 1px;
+    height: 2rem;
+  }
+  #checkbox{
+    display: inline;
+    margin-bottom: 1rem;
+    width: 4rem;
+    height: 1rem;
+    margin-left: -1rem
+    
+  
+  }
+  
